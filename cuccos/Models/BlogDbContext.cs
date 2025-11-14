@@ -4,7 +4,14 @@ namespace cuccos.Models
 {
     public class BlogDbContext: DbContext
     {
+        public BlogDbContext()
+        {
 
+        }
+
+        public BlogDbContext(DbContextOptions options) : base(options)
+        {
+        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
