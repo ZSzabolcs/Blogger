@@ -115,7 +115,8 @@ namespace cuccos.Controllers
                 return Ok(bloggerCount);
             }
         }
-        [HttpGet("NevEsEmail")]
+
+        [HttpGet("nevEsEmail")]
         public ActionResult<IEnumerable<GetNameEmail>> GetNevEmail()
         {
             using (var context = new BlogDbContext())
@@ -128,6 +129,22 @@ namespace cuccos.Controllers
                 }
 
                 return BadRequest(new { message = "Sikertelen a bloggerek neveinek lekérdezése." });
+            }
+        }
+
+        [HttpGet("legregebbi")]
+        public ActionResult<Blogger> GetLegregebbiBlogger()
+        {
+            using (var context = new BlogDbContext())
+            {
+                var legregebbiBlogger = context.Bloggers.OrderBy(b => b.regtime).FirstOrDefault();
+
+                if (legregebbiBlogger != null)
+                {
+                    return Ok(legregebbiBlogger);
+                }
+
+                return NotFound(new { meassage = "A Bloggerek tábla üres, nincs legrégebbi blogger." });
             }
         }
     }
