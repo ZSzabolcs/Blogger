@@ -11,11 +11,15 @@ namespace cuccos.Models
 
         public BlogDbContext(DbContextOptions options) : base(options)
         {
+
         }
+
+        public DbSet<Blogger> Bloggers { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySQL("server=localhost;database=blogger;user=root;password=;SslMode=None");
+            optionsBuilder.UseMySQL("server=localhost;database=blog;user=root;password=");
         }
     }
 }

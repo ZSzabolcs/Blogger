@@ -127,3 +127,4 @@ C:\Users\ZSzabolcs\source\repos\cuccos\cuccos\obj\Debug\net8.0\refint\cuccos.dll
 C:\Users\ZSzabolcs\source\repos\cuccos\cuccos\obj\Debug\net8.0\cuccos.pdb
 C:\Users\ZSzabolcs\source\repos\cuccos\cuccos\obj\Debug\net8.0\cuccos.genruntimeconfig.cache
 C:\Users\ZSzabolcs\source\repos\cuccos\cuccos\obj\Debug\net8.0\ref\cuccos.dll
+C:\Users\ZSzabolcs\source\repos\cuccos\cuccos\obj\Debug\net8.0\cuccos.sourcelink.json
