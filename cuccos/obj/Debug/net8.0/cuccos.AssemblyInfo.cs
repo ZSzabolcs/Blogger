@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("cuccos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+50ca97f4b8d776d341d36989f549cda93162dce0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+463f097195fa46c5f71122d4d7804ea6f14284af")]
 [assembly: System.Reflection.AssemblyProductAttribute("cuccos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("cuccos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

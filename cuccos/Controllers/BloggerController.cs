@@ -105,5 +105,30 @@ namespace cuccos.Controllers
                 return NotFound(new { meassage = "Nincs mit frissíteni!" });
             }
         }
+
+        [HttpGet("count")]
+        public ActionResult<int> GetBloggerCount()
+        {
+            using (var context = new BlogDbContext())
+            {
+                int bloggerCount = context.Bloggers.Count();
+                return Ok(bloggerCount);
+            }
+        }
+        [HttpGet("NevEsEmail")]
+        public ActionResult<IEnumerable<GetNameEmail>> GetNevEmail()
+        {
+            using (var context = new BlogDbContext())
+            {
+                var nevekEsEmailek = context.Bloggers.Select(b => new GetNameEmail{name = b.name, email = b.email}).ToList();
+
+                if (nevekEsEmailek != null)
+                {
+                    return Ok(nevekEsEmailek);
+                }
+
+                return BadRequest(new { message = "Sikertelen a bloggerek neveinek lekérdezése." });
+            }
+        }
     }
 }
